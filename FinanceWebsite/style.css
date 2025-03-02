@@ -1,0 +1,478 @@
+* {
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+  box-sizing: border-box;
+}
+
+:root {
+  --light-black: #212a37;
+  --light-gray: #f6f6f6;
+  --white: #fff;
+  --text-gray: #616974;
+  --black: #111;
+}
+
+.wrapper {
+  max-width: 1150px;
+  margin: auto;
+}
+
+section {
+  padding: 60px 0;
+}
+
+.btn {
+  padding: 15px;
+  border: none;
+  border-radius: 5px;
+  font-size: 0.9rem;
+  word-spacing: -1px;
+  background-color: var(--light-black);
+  color: var(--white);
+  cursor: pointer;
+}
+
+/* header */
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 0;
+}
+
+.logo {
+  font-size: 2.2rem;
+  font-weight: 900;
+}
+
+.nav-lists {
+  display: flex;
+  gap: 20px;
+  list-style: none;
+}
+
+.nav-lists .nav__link {
+  position: relative;
+  padding: 10px 0;
+  cursor: pointer;
+  font-size: 1.2rem;
+  font-weight: 500;
+}
+
+.nav-lists .nav__link::after {
+  content: "";
+  position: absolute;
+  width: 0%;
+  height: 1px;
+  right: 0;
+  bottom: 0;
+  transition: all 0.3s ease-in;
+  background-color: var(--light-black);
+}
+
+.nav-lists .nav__link:hover::after {
+  width: 100%;
+}
+
+/* hero section */
+.hero {
+  overflow: hidden;
+  height: 85vh;
+  padding: 30px 0;
+  display: flex;
+  justify-content: center;
+  background-image: url("moneyimg-removebg-preview.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center top;
+}
+
+.hero__content {
+  text-align: center;
+  max-width: 550px;
+}
+
+.hero__content .hero__title {
+  font-size: 3.5rem;
+}
+
+.hero__content .hero__description {
+  font-size: 1.4rem;
+  color: var(--text-gray);
+  margin: 15px 0;
+}
+
+.hero__content button {
+  text-transform: capitalize;
+}
+
+/* finance-section */
+.finance-title {
+  text-align: center;
+  font-size: 1.8rem;
+}
+
+.finance__cards {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 30px;
+  gap: 20px;
+  justify-content: center;
+}
+
+.finance__card {
+  width: 26%;
+  min-width: 260px;
+  padding: 20px;
+  border-radius: 10px;
+  background-color: var(--light-gray);
+}
+
+.finance__card-bg-black {
+  background-color: var(--light-black);
+}
+
+.image-container {
+  height: 50px;
+  border-radius: 10px;
+  width: 50px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--light-black);
+}
+
+.finance__card-bg-gery {
+  background-color: var(--light-gray);
+}
+
+.image-container img {
+  height: 80%;
+  width: 80%;
+  object-fit: contain;
+}
+
+.finance__card h4 {
+  margin-top: 10px;
+  font-size: 1.1rem;
+}
+
+.finance__card p {
+  margin-block: 10px;
+}
+
+.finance__card a {
+  color: var(--text-gray);
+}
+
+/* about  */
+.page-2 {
+  background-color: var(--light-black);
+}
+
+.learn-btn {
+  color: var(--light-black);
+  background-color: var(--light-gray);
+}
+
+.about {
+  color: var(--white);
+  display: flex;
+  justify-content: space-between;
+}
+
+.about__left {
+  display: flex;
+  align-items: end;
+  width: 48%;
+  justify-content: center;
+}
+
+.about__left-image {
+  width: 300px;
+  border-radius: 10px;
+  height: 220px;
+  position: relative;
+  background-color: var(--light-gray);
+}
+
+.about__left-image img {
+  width: 100%;
+  position: absolute;
+  left: 5%;
+  bottom: 10%;
+  border-radius: 10px;
+}
+
+.about__right {
+  width: 48%;
+  padding: 0 30px;
+}
+
+.about__right h2 {
+  font-size: 2.5rem;
+}
+
+.about__right>p {
+  font-size: 1.3rem;
+  margin-block: 15px;
+}
+
+.about__right-box h5 {
+  font-size: 1.4rem;
+}
+
+.about__right-box p {
+  font-size: 1.1rem;
+  margin-block: 15px;
+}
+
+/* testimonials section */
+.testimonials__title {
+  text-align: center;
+}
+
+.testimonials__title h2 {
+  font-size: 2.2rem;
+}
+
+.testimonials__title p {
+  font-size: 1.2rem;
+}
+
+.testimonials__card {
+  max-width: 800px;
+  width: 100%;
+  padding: 10px;
+  flex-wrap: wrap;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+  border-radius: 10px;
+  overflow: hidden;
+  margin: 30px auto;
+  box-shadow: 0 2px 20px rgba(25, 25, 26, 0.425);
+}
+
+.testimonials__left {
+  width: 60%;
+  padding: 10px;
+}
+
+.testimonials__left h2 {
+  font-size: 1.8rem;
+}
+
+.testimonials__left p {
+  margin: 20px 0;
+}
+
+.profile h5 {
+  font-weight: 900;
+  font-size: 1.3rem;
+  line-height: 1;
+}
+
+.profile p {
+  margin: 0;
+}
+
+.testimonials__right {
+  width: 35%;
+  height: 300px;
+  border-radius: 20px;
+  overflow: hidden;
+  background-color: #cdbfb6;
+}
+
+.testimonials__right img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+/* newsletter-content */
+.page-4 {
+  background-color: var(--light-gray);
+
+}
+
+.newsletter {
+  display: flex;
+  padding: 80px 0;
+  align-items: center;
+  justify-content: center;
+}
+
+.newsletter-content {
+  text-align: center;
+}
+
+.newsletter-content h2 {
+  font-size: 2.2rem;
+}
+
+.newsletter-content p {
+  margin-block: 10px;
+}
+
+.input-box {
+  display: flex;
+}
+
+.input-box input {
+  width: 300px;
+  padding: 15px;
+  font-size: 1rem;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+  border: 0.2px solid black;
+}
+
+.input-box input:focus {
+  outline: none;
+}
+
+.input-box button {
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+}
+
+/* footer */
+footer {
+  padding: 30px 0;
+  background-color: var(--light-gray);
+}
+
+footer .wrapper {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.footer-content1 {
+  flex-grow: 1;
+  flex-basis: 350px;
+}
+
+.footer-content1 h4 {
+  font-size: 2rem;
+  font-weight: 900;
+}
+
+.footer-content1 p {
+  margin-block: 20px;
+  font-size: 1.2rem;
+}
+
+.footer-content {
+  flex-basis: 180px;
+  flex-grow: 1;
+}
+
+.footer-content h4 {
+  font-size: 1.4rem;
+  font-weight: 900;
+}
+
+.footer-content ul {
+  list-style: none;
+  font-size: 1.2rem;
+  color: var(--text-gray);
+}
+
+.footer-content ul li {
+  padding: 10px 0;
+  cursor: pointer;
+}
+
+@media (max-width:1024px) {
+  .wrapper{
+    width: 96%;
+  }
+}
+@media (max-width:768px) {
+  .hero {
+    height: 70vh;
+    padding: 15px 0;
+}
+  .nav-lists {
+    display: none;
+  }
+
+  section {
+    padding: 30px 0;
+  }
+
+  .about {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .about__left {
+    display: flex;
+    width: 100%;
+  }
+
+  .about__left-image img {
+    width: 70%;
+    left: 15%;
+  }
+  .about__right {
+    width: 100%;
+  }
+}
+
+@media (min-width:320px) and (max-width:520px) {
+  .testimonials__card {
+    flex-direction: column;
+  }
+
+  .testimonials__left {
+    width: 100%;
+  }
+
+  .testimonials__right {
+    width: 100%;
+  }
+
+  .about__left-image img {
+    width: 70%;
+    left: 15%;
+  }
+
+  .logo {
+    font-size: 2rem;
+  }
+
+  .btn {
+    font-size: 0.6rem;
+  }
+
+  .finance-title {
+    font-size: 1.4rem;
+    line-height: 1;
+  }
+
+  .hero__content .hero__title {
+    font-size: 3rem;
+  }
+
+  .about__right h2 {
+    font-size: 1.5rem;
+  }
+
+  .about__right>p {
+    margin-block: 10px;
+  }
+  .input-box input {
+    width: 200px;
+    padding: 15px;
+    font-size: 1rem;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    border: 0.2px solid black;
+}
+}
