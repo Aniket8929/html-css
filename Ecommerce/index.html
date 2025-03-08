@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ecommerce</title>
+  <!-- ==============bootstrap cdn============== -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <!-- ==============icon cdn============== -->
+  <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.11.3/font/bootstrap-icons.min.css"
+    integrity="sha512-dPXYcDub/aeb08c63jRq/k6GaKccl256JQy/AnOq7CAnEZ9FzSL9wSbcZkMp4R26vBsMLFYH4kQ67/bbV8XaCQ=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <!-- header -->
+  <header>
+    <div class="container-xl">
+      <div class="header-top d-flex justify-content-between align-items-center">
+        <!-- logo  -->
+        <a class="fs-3 fw-bold text-decoration-none text-black cursor-pointer" href="#">
+          <i class="bi bi-cart"></i>
+          <span> Fresh Cart</span>
+        </a>
+        <!-- search icon -->
+        <div class="d-lg-flex gap-3 d-none">
+          <div class="input-group">
+            <input id="search-input" type="text" class="form-control" placeholder="search for products"
+              aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+            <span class="input-group-text" id="inputGroup-sizing-default"><i class="bi bi-search"></i></span>
+          </div>
+          <button type="button" class="btn btn-outline-secondary d-flex gap-1"><i class="bi bi-geo-alt-fill"></i><span
+              id="location">location</span></button>
+        </div>
+
+        <div class="header-icon fs-4 d-flex gap-3">
+          <a href="#"> <i class="bi bi-suit-heart"></i> </a>
+          <a href="#"><i class="bi bi-person-circle"></i></a>
+          <a href="#"><i class="bi bi-bag"></i></a>
+        </div>
+      </div>
+      <div class="header-bottom">
+        <!-- navbar -->
+        <nav class="navbar navbar-expand-lg">
+          <button type="button" class="btn btn-success" id="all-department-btn">All Department</button>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+            aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item"><a class="nav-link active" href="#">Home</a></li>
+              <li class="nav-item"><a class="nav-link" href="#">Shop</a></li>
+              <li class="nav-item"><a class="nav-link" href="#">Stores</a></li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Account</a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="#">Sign in</a></li>
+                  <li><a class="dropdown-item" href="#">Signup</a></li>
+                  <li><a class="dropdown-item" href="#">Forgot Password</a></li>
+                  <li>
+                    <hr class="dropdown-divider">
+                  </li>
+                  <li><a class="dropdown-item" href="#">My Account</a></li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </nav>
+      </div>
+    </div>
+  </header>
+  <main>
+    <!-- hero carousel -->
+    <section class="hero-banner">
+      <div class="container-xl">
+        <div id="carouselExampleDark" class="carousel carousel-dark slide">
+          <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active"
+              aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1"
+              aria-label="Slide 2"></button>
+          </div>
+          <div class="carousel-inner">
+            <div class="carousel-item active" data-bs-interval="10000">
+              <img src="https://freshcart-next-js.vercel.app/images/slider/slide-1.jpg" class="d-block w-100" alt="...">
+              <div class="carousel-caption d-none d-md-block">
+                <h5>First slide label</h5>
+                <p>Some representative placeholder content for the first slide.</p>
+              </div>
+            </div>
+            <div class="carousel-item" data-bs-interval="2000">
+              <img src="https://freshcart-next-js.vercel.app/images/slider/slide-2.jpg" class="d-block w-100" alt="...">
+              <div class="carousel-caption d-none d-md-block">
+                <h5>Second slide label</h5>
+                <p>Some representative placeholder content for the second slide.</p>
+              </div>
+            </div>
+          </div>
+          <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark"
+            data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark"
+            data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+      </div>
+    </section>
+    <!-- Featured Categories -->
+    <section class="featured">
+      <div class="container-xl">
+        <div class="row">
+          <div class="col-md col-6">
+            <div class="card rounded ">
+              <img src="https://freshcart-next-js.vercel.app/images/category/category-baby-care.jpg"
+                class="card-img-top img-fluid" alt="...">
+              <div class="card-body">
+                <p class="card-text">baby care</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md col-6">
+            <div class="card">
+              <img src="https://freshcart-next-js.vercel.app/images/category/category-chicken-meat-fish.jpg"
+                class="card-img-top" alt="...">
+              <div class="card-body">
+                <p class="card-text">baby care</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md col-6">
+            <div class="card">
+              <img src="https://freshcart-next-js.vercel.app/images/category/category-dairy-bread-eggs.jpg"
+                class="card-img-top" alt="...">
+              <div class="card-body">
+                <p class="card-text">baby care</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md col-6">
+            <div class="card">
+              <img src="https://freshcart-next-js.vercel.app/images/category/category-bakery-biscuits.jpg"
+                class="card-img-top" alt="...">
+              <div class="card-body">
+                <p class="card-text">baby care</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- banner card -->
+    <section class="banner-card">
+      <div class="container-xl">
+        <div class="row">
+          <div class="col-sm-6 mb-3 mb-sm-0">
+            <div class="card"
+              style="padding: 2rem;background: url(https://freshcart-next-js.vercel.app/images/banner/grocery-banner.png) no-repeat center;">
+              <div class="card-body">
+                <h5 class="card-title">Fruits & Vegetables</h5>
+                <p class="card-text">Get Upto 30% Off</p>
+                <button type="button" class="btn btn-dark fw-bold"
+                  style="--bs-btn-padding-y: 10px; --bs-btn-padding-x: 35px; --bs-btn-font-size: 1rem;">
+                  Shop
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-6">
+            <div class="card"
+              style="padding: 2rem; background: url(https://freshcart-next-js.vercel.app/images/banner/grocery-banner-2.jpg) no-repeat center;">
+              <div class="card-body">
+                <h5 class="card-title">Freshly Baked Buns</h5>
+                <p class="card-text">Get Upto 30% Off</p>
+                <button type="button" class="btn btn-dark fw-bold"
+                  style="--bs-btn-padding-y: 10px; --bs-btn-padding-x: 35px; --bs-btn-font-size: 1rem;">
+                  Shop
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- products cards -->
+    <section class="products">
+      <div class="container-xl">
+        <div class="row">
+          <div class="col-md-3 col-6 my-2 ">
+            <div class="card p-2 shadow-sm">
+              <div class="position-relative text-center">
+                <span class="badge bg-danger position-absolute top-0 start-0 m-2">Sale</span>
+                <span class="badge bg-success position-absolute top-0 end-0 m-2">10%</span>
+                <img src="https://freshcart-next-js.vercel.app/images/products/product-img-1.jpg" class="card-img-top"
+                  alt="Haldiram's Sev Bhujia" style="max-width: 150px;">
+              </div>
+              <div class="card-body">
+                <p class="text-muted mb-1">Snack & Munchies</p>
+                <h5 class="card-title">Haldiram's Sev Bhujia</h5>
+                <div class="d-flex align-items-center">
+                  <span class="text-warning me-1">&#9733;&#9733;&#9733;&#9733;&#9734;</span>
+                  <span class="text-muted small">4.3 (4)</span>
+                </div>
+                <p class="mt-2">
+                  <span class="fw-bold text-success">$21.6</span>
+                  <span class="text-decoration-line-through text-muted">$24</span>
+                </p>
+                <button class="btn btn-success w-100">+ Add</button>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3 col-6 my-2">
+            <div class="card p-2 shadow-sm">
+              <div class="position-relative text-center">
+                <span class="badge bg-danger position-absolute top-0 start-0 m-2">Sale</span>
+                <span class="badge bg-success position-absolute top-0 end-0 m-2">10%</span>
+                <img src="https://freshcart-next-js.vercel.app/images/products/product-img-1.jpg" class="card-img-top"
+                  alt="Haldiram's Sev Bhujia" style="max-width: 150px;">
+              </div>
+              <div class="card-body">
+                <p class="text-muted mb-1">Snack & Munchies</p>
+                <h5 class="card-title">Haldiram's Sev Bhujia</h5>
+                <div class="d-flex align-items-center">
+                  <span class="text-warning me-1">&#9733;&#9733;&#9733;&#9733;&#9734;</span>
+                  <span class="text-muted small">4.3 (4)</span>
+                </div>
+                <p class="mt-2">
+                  <span class="fw-bold text-success">$21.6</span>
+                  <span class="text-decoration-line-through text-muted">$24</span>
+                </p>
+                <button class="btn btn-success w-100">+ Add</button>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3 col-6 my-2">
+            <div class="card p-2 shadow-sm">
+              <div class="position-relative text-center">
+                <span class="badge bg-danger position-absolute top-0 start-0 m-2">Sale</span>
+                <span class="badge bg-success position-absolute top-0 end-0 m-2">10%</span>
+                <img src="https://freshcart-next-js.vercel.app/images/products/product-img-1.jpg" class="card-img-top"
+                  alt="Haldiram's Sev Bhujia" style="max-width: 150px;">
+              </div>
+              <div class="card-body">
+                <p class="text-muted mb-1">Snack & Munchies</p>
+                <h5 class="card-title">Haldiram's Sev Bhujia</h5>
+                <div class="d-flex align-items-center">
+                  <span class="text-warning me-1">&#9733;&#9733;&#9733;&#9733;&#9734;</span>
+                  <span class="text-muted small">4.3 (4)</span>
+                </div>
+                <p class="mt-2">
+                  <span class="fw-bold text-success">$21.6</span>
+                  <span class="text-decoration-line-through text-muted">$24</span>
+                </p>
+                <button class="btn btn-success w-100">+ Add</button>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3 col-6 my-2">
+            <div class="card p-2 shadow-sm">
+              <div class="position-relative text-center">
+                <span class="badge bg-danger position-absolute top-0 start-0 m-2">Sale</span>
+                <span class="badge bg-success position-absolute top-0 end-0 m-2">10%</span>
+                <img src="https://freshcart-next-js.vercel.app/images/products/product-img-1.jpg" class="card-img-top"
+                  alt="Haldiram's Sev Bhujia" style="max-width: 150px;">
+              </div>
+              <div class="card-body">
+                <p class="text-muted mb-1">Snack & Munchies</p>
+                <h5 class="card-title">Haldiram's Sev Bhujia</h5>
+                <div class="d-flex align-items-center">
+                  <span class="text-warning me-1">&#9733;&#9733;&#9733;&#9733;&#9734;</span>
+                  <span class="text-muted small">4.3 (4)</span>
+                </div>
+                <p class="mt-2">
+                  <span class="fw-bold text-success">$21.6</span>
+                  <span class="text-decoration-line-through text-muted">$24</span>
+                </p>
+                <button class="btn btn-success w-100">+ Add</button>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3 col-6 my-2">
+            <div class="card p-2 shadow-sm">
+              <div class="position-relative text-center">
+                <span class="badge bg-danger position-absolute top-0 start-0 m-2">Sale</span>
+                <span class="badge bg-success position-absolute top-0 end-0 m-2">10%</span>
+                <img src="https://freshcart-next-js.vercel.app/images/products/product-img-1.jpg" class="card-img-top"
+                  alt="Haldiram's Sev Bhujia" style="max-width: 150px;">
+              </div>
+              <div class="card-body">
+                <p class="text-muted mb-1">Snack & Munchies</p>
+                <h5 class="card-title">Haldiram's Sev Bhujia</h5>
+                <div class="d-flex align-items-center">
+                  <span class="text-warning me-1">&#9733;&#9733;&#9733;&#9733;&#9734;</span>
+                  <span class="text-muted small">4.3 (4)</span>
+                </div>
+                <p class="mt-2">
+                  <span class="fw-bold text-success">$21.6</span>
+                  <span class="text-decoration-line-through text-muted">$24</span>
+                </p>
+                <button class="btn btn-success w-100">+ Add</button>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3 col-6 my-2">
+            <div class="card p-2 shadow-sm">
+              <div class="position-relative text-center">
+                <span class="badge bg-danger position-absolute top-0 start-0 m-2">Sale</span>
+                <span class="badge bg-success position-absolute top-0 end-0 m-2">10%</span>
+                <img src="https://freshcart-next-js.vercel.app/images/products/product-img-1.jpg" class="card-img-top"
+                  alt="Haldiram's Sev Bhujia" style="max-width: 150px;">
+              </div>
+              <div class="card-body">
+                <p class="text-muted mb-1">Snack & Munchies</p>
+                <h5 class="card-title">Haldiram's Sev Bhujia</h5>
+                <div class="d-flex align-items-center">
+                  <span class="text-warning me-1">&#9733;&#9733;&#9733;&#9733;&#9734;</span>
+                  <span class="text-muted small">4.3 (4)</span>
+                </div>
+                <p class="mt-2">
+                  <span class="fw-bold text-success">$21.6</span>
+                  <span class="text-decoration-line-through text-muted">$24</span>
+                </p>
+                <button class="btn btn-success w-100">+ Add</button>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3 col-6 my-2">
+            <div class="card p-2 shadow-sm">
+              <div class="position-relative text-center">
+                <span class="badge bg-danger position-absolute top-0 start-0 m-2">Sale</span>
+                <span class="badge bg-success position-absolute top-0 end-0 m-2">10%</span>
+                <img src="https://freshcart-next-js.vercel.app/images/products/product-img-1.jpg" class="card-img-top"
+                  alt="Haldiram's Sev Bhujia" style="max-width: 150px;">
+              </div>
+              <div class="card-body">
+                <p class="text-muted mb-1">Snack & Munchies</p>
+                <h5 class="card-title">Haldiram's Sev Bhujia</h5>
+                <div class="d-flex align-items-center">
+                  <span class="text-warning me-1">&#9733;&#9733;&#9733;&#9733;&#9734;</span>
+                  <span class="text-muted small">4.3 (4)</span>
+                </div>
+                <p class="mt-2">
+                  <span class="fw-bold text-success">$21.6</span>
+                  <span class="text-decoration-line-through text-muted">$24</span>
+                </p>
+                <button class="btn btn-success w-100">+ Add</button>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3 col-6 my-2">
+            <div class="card p-2 shadow-sm">
+              <div class="position-relative text-center">
+                <span class="badge bg-danger position-absolute top-0 start-0 m-2">Sale</span>
+                <span class="badge bg-success position-absolute top-0 end-0 m-2">10%</span>
+                <img src="https://freshcart-next-js.vercel.app/images/products/product-img-1.jpg" class="card-img-top"
+                  alt="Haldiram's Sev Bhujia" style="max-width: 150px;">
+              </div>
+              <div class="card-body">
+                <p class="text-muted mb-1">Snack & Munchies</p>
+                <h5 class="card-title">Haldiram's Sev Bhujia</h5>
+                <div class="d-flex align-items-center">
+                  <span class="text-warning me-1">&#9733;&#9733;&#9733;&#9733;&#9734;</span>
+                  <span class="text-muted small">4.3 (4)</span>
+                </div>
+                <p class="mt-2">
+                  <span class="fw-bold text-success">$21.6</span>
+                  <span class="text-decoration-line-through text-muted">$24</span>
+                </p>
+                <button class="btn btn-success w-100">+ Add</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="bg-light py-5">
+    <div class="container-xl">
+      <div class="row">
+        <!-- Categories -->
+        <div class="col-md-3">
+          <h5>Categories</h5>
+          <ul class="list-unstyled">
+            <li>Vegetables & Fruits</li>
+            <li>Breakfast & Instant Food</li>
+            <li>Bakery & Biscuits</li>
+            <li>Atta, Rice & Dal</li>
+            <li>Sauces & Spreads</li>
+            <li>Organic & Gourmet</li>
+            <li>Baby Care</li>
+            <li>Cleaning Essentials</li>
+            <li>Personal Care</li>
+          </ul>
+        </div>
+
+        <!-- Get to know us -->
+        <div class="col-md-3">
+          <h5>Get to know us</h5>
+          <ul class="list-unstyled">
+            <li>Company</li>
+            <li>About</li>
+            <li>Blog</li>
+            <li>Help Center</li>
+            <li>Our Value</li>
+          </ul>
+        </div>
+
+        <!-- For Consumers -->
+        <div class="col-md-3">
+          <h5>For Consumers</h5>
+          <ul class="list-unstyled">
+            <li>Payments</li>
+            <li>Shipping</li>
+            <li>Product Returns</li>
+            <li>FAQ</li>
+            <li>Shop Checkout</li>
+          </ul>
+        </div>
+
+        <!-- Become a Shopper -->
+        <div class="col-md-3">
+          <h5>Become a Shopper</h5>
+          <ul class="list-unstyled">
+            <li>Shopper Opportunities</li>
+            <li>Become a Shopper</li>
+            <li>Earnings</li>
+            <li>Ideas & Guides</li>
+            <li>New Retailers</li>
+          </ul>
+        </div>
+      </div>
+
+      <hr>
+
+      <!-- Payment Partners and App Links -->
+      <div class="d-flex justify-content-between align-items-center flex-wrap">
+        <div>
+          <h6>Payment Partners</h6>
+          <img class="m-2" src="https://upload.wikimedia.org/wikipedia/commons/0/04/Visa.svg" height="30" alt="Visa">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b5/PayPal.svg/120px-PayPal.svg.png"
+            height="30" alt="PayPal">
+        </div>
+        <div>
+          <h6>Get deliveries with FreshCart</h6>
+          <a href="#"><img
+              src="data:image/jpeg;base64,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"
+              height="40" alt="App Store"></a>
+          <a href="#"><img
+              src="data:image/png;base64,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"
+              height="40" alt="Google Play"></a>
+        </div>
+      </div>
+
+      <hr>
+
+      <!-- Copyright -->
+      <div class="text-center">
+        <p class="mb-0">&copy; 2022 - 2025 FreshCart eCommerce HTML Template. All rights reserved. Powered by <span
+            class="text-success">Codescandy</span>.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ==============bootstrap js cdn============== -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>

@@ -1,0 +1,57 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+:root {
+  --primary-clr: #0aad0a;
+  --secondary-clr: #198754;
+  --third-clr: #ffc107;
+  --text-grey: #f0f3f2;
+  --ling-black: #001e2b;
+}
+
+a {
+  color: var(--ling-black);
+}
+
+header {
+  padding: 20px 0;
+}
+
+.header-top>a>i {
+  color: var(--primary-clr);
+}
+
+#inputGroup-sizing-default {
+  font-size: 1.2rem;
+}
+
+#location {
+  text-transform: capitalize;
+  font-weight: 900;
+}
+
+#search-input {
+  width: 350px;
+}
+
+#all-department-btn {
+  background-color: var(--primary-clr);
+  padding-inline: 30px;
+  margin-right: 25px;
+}
+
+.featured {
+  margin: 40px 0;
+}
+
+.card {
+  transition: all 0.3s ease-in;
+}
+
+.card:hover {
+  border: 1px solid var(--primary-clr);
+}
