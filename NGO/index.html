@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ngo website</title>
+  <!-- ==============bootstrap cdn============== -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <!-- ==============Icons cdn============== -->
+  <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.11.3/font/bootstrap-icons.min.css"
+    integrity="sha512-dPXYcDub/aeb08c63jRq/k6GaKccl256JQy/AnOq7CAnEZ9FzSL9wSbcZkMp4R26vBsMLFYH4kQ67/bbV8XaCQ=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <!-- ============================== start header ================ -->
+  <header>
+    <div class="container-xl">
+      <nav class="navbar navbar-expand-lg d-flex justify-content-between align-items-center  py-3">
+        <a class="navbar-brand d-flex align-items-center" href="#">
+          <img src="assert/egologo.png" alt="EduChild Logo" width="45" class="me-2">
+          <span class="fs-3 fw-bold">EduChild</span>
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+          aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+          <ul class="navbar-nav fs-5">
+            <li class="nav-item">
+              <a class="nav-link active" href="#home">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#about-section">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Resources</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#contact-section">Contact</a>
+            </li>
+          </ul>
+        </div>
+        <div class="d-lg-flex d-none gap-3">
+          <button type="button" class="btn donate__btn" style="padding: 10px 25px;" data-bs-toggle="offcanvas"
+            data-bs-target="#offcanvasExample">Donate now</button>
+          <button type="button" class="btn btn-outline-secondary" style="padding: 10px 25px;">Join now</button>
+        </div>
+      </nav>
+
+      <div class="collapse navbar-collapse d-lg-none text-center pb-3" id="navbarNav">
+        <button type="button" class="btn donate__btn w-100" style="padding: 10px 25px;" data-bs-toggle="offcanvas"
+          data-bs-target="#offcanvasExample">Donate now</button>
+        <button type="button" class="btn btn-outline-secondary w-100 my-1">Join now</button>
+      </div>
+    </div>
+  </header>
+
+  <!-- model -->
+  <div class="offcanvas offcanvas-end model_card" tabindex="-1" id="offcanvasExample"
+    aria-labelledby="offcanvasExampleLabel">
+    <div class="offcanvas-header position-relative">
+      <button type="button" class="btn-close position-absolute" style="right:20px; top: 20px;"
+        data-bs-dismiss="offcanvas"></button>
+    </div>
+    <div class="offcanvas-body">
+      <h5 class="fs-1 fw-bold">Support Our Mission – Every Contribution Counts!</h5>
+      <p>Your donation helps us continue our work. Every amount makes a difference!</p>
+      <img
+        src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOEAAADhCAMAAAAJbSJIAAAAeFBMVEX///8AAAB4eHgnJye7u7vo6OiioqJwcHDy8vLBwcFnZ2evr6/i4uKHh4dVVVWcnJy1tbU1NTXS0tKVlZWpqamOjo7Y2Nh/f3/Hx8dMTEzx8fH4+Phra2sbGxtHR0fg4OA8PDwREREwMDBcXFwiIiIYGBgxMTFBQUH/lneRAAAKh0lEQVR4nO2df0OyMBDH0xBFU0nwJ6SWVu//HT7ujie/eAyHYFrd9y8a27GP6ca22+3hQaVSqVQqlUqlUqlUKpVKpVKpVKWKu21HzbEYpaQJXUfmursRphdg2of0JD2mp5w0d61EN65M2G256gWLcdKKrpd0PRGmB1A4hfQVWuWkF+dadCsTtp1tP0rCHl2PHAixYj1J+Ohci7YSKmE1Qm5pXH6HfUhPbkE4DLwSxTbC4dQoNHlCbnU8kzScAGGfTHPKigpEbFUSxmWVCIa1CIPSPB0bIasD6XNKGQDhEO4+oSFJiIakglqEXmmeM4RPkD50IHxGE3ztQugpoUVKaHQhYSwIc4ZuQTgZ+yfybISx0WBfSjjzKRfaiyHFRuidVmI8aYxw3DrVzkbIei4lZAVgbkkp1v6QCXeiFuPGCH1hu98s4YhSrO80TNgXtfCVUAkvJ3y0EIalhAXjw7siHIQHZf8kPzpouhKEcy/8UmzyRG0gTKbRl6Z3SIgfvdRQmOD+cAaEBfoFhBMlVEIlbJCwPT8o95zJ4qBgJQiXQ5N1bO4uQio2pevFnRNKren2RBByxbg/TMHQ/scR4lwbEo6BkOfacuNDJVTCbyTE+dJyws6tCb1d/0SRJJzMvpRNAg9Nzp1HSZG5Tj8F4W5j7gYuhNFpJXZeY4Q2FfSHLHznTimFJ159QYg6Q2jTTQh7kKkLhGMlPJUSGimhTUwYd8o0kYRLo+2GbicOhHsqsEZCto2Ek9JaxLUIXVQwtuAZ4Y0DIVcs1x+iobtaIcWK4VxbOWHBO40SKmHzhHtZsY+LCD+kof0VCecvj27ab7FiidHDen+4kSP0KD2i6+jB/BG8HvK8tOl60zKG1nSdIOF271iLl3kxRpPCDzSBdJtzFc6Xrum6YO3proTVkz2+jRBnogrWLe5KSqiEP4sQWxo5+YCEuDJTsLp2feH0ylTc7cjKYCXRd3YK6Ty9soCUkTQhzfHcCH8lcKm1nrBikYWwgrcJS46erIT4TjOjFHYfw6VWJVTCv024wspUJfTulRCbwKWNDQltYwtWwfqhO2EMd6uPLZRQCZXwXgixCZSEWxdCfi/lqeUIDLFwBFxAiOaYsN0wYbLq/VcSPj4/P78Nk6+U3mZ/SPlYlxNS/lVyNJddL0zhtzabsxHyk9dASCaSyNTl0TeFk0EtQlRIlnA+JOdgYCO0CWeickJC1hIIWfxlqLdCKmUjLFi3UEIjJQR9F6H8RedGwFUJuVHuyxs2QhxQMyF3O/zJ41ZNN0XL0Wi0REes3pMRruUlG5OyWR9yjjJPes7zVkoYkOmoc2quR4bYR6W1G31p904p62PKckCFV5Z6ucllhTTjxP8bJ0k/b5TcM5MRyq+BTU2MLZTwKCUUuivC8h2WmaoSyp1drFXLWc0Rjrrn1Z5NDuJX6BanvJcSdkz+SZgecqY4znig9ImNamCeM0uBMOgbE5fOnbqvkGYRB+QNlx6/oBuzPcc2epIz1U0TXuedRgmVsEnC15sR+o0RzhdBECzklomtSQ+CIYmucY6jgDCYHzLOA0G4mg+PYqOkBcc2GZhrbyUInyhTTKWqt6hIyKVxkpqV29zKxcoJcZ5Gepu00BBLeu7JOW8PDF1KyNFtwvqE5f40tQjreQwp4c8kRAcD30L4iVTuhPg7xF1BBYSvFkIcEVxKuBh8KeZ2ehMPTjUmcSYuBjdjnAUNIpOTLbC5J/ojJgu5Zto3KdmscXh8TNQBwq7JFNWLOOAi/ujfXbJi9BbUTHwxCv6TOCM8hzz1Ig646MyeGZTcrc6yjiQwE861IWHTc21SSgj60YROv0MZcYDlROjyO6z+TiNla0uzwIBwN+bVpYCuO0DYDo9tKasTibaUFYommx4Q8nQqtqUzMuEyo3RO1v6QhTdkVEG5EInK9YdScndeEzwuhNY1YBmRTnqboHLvNC6EzXmbKOFvJyxYfr+MsPLvsAnCyXGkHfAr9AQH4qQpj+u5AN2duhC2YRTP4gmXlylZ5Ux0PX2laxrjB9HxwXM2+gQmZHjGc5JjCyn+6F8xyYXQpjN7ZrCTYeEO7CbG+DZCp+ieVyGs522ihH+JsCBScgKEs/smpLWnNKbVJW6zV7Q+xF4Dq/5x7Slry2jtKV3QahS/MPOSETdcS1iyYv6PtrnuIyEZ7fOCFu9d4xRu0Z/oYfxaSGtPmaF6EVpxbjkLhYBZ8UNn2TbVYTe2gIoVRI3AYhjAgOslA781ERcDPfcKwv9i4WcLoayYNfIHFrvmbKIS/l5CXLotIHy7iPDtewnRJ4oJh8YPqcOOFDvySWKxT9QSUjp9cmWSQfHH4MqUi09DJvpsgp+/PHpArZmQfai4UfbBUBPzNDICT06cCVO4P5QhVVly7YlV8GVANR2h1Z3QGhdjZCkg1y1YvXLCpmMMKeFfIizw8/4RhOilz4tixrf+v7g7eH0mX31yt09ezB9bfnSHUpDwkYrx21xELvYhEtLD/jvk9k6UvbS134yJl6O5zFc/20NQmTC1fPSsDaVkM1H40Vv+bS3sdlBdMGcV9oc8SOF+umlvE7kR5MwaMAr3zEhCp7k21jX9aZRQCZXwuwlRMRDKIGQ5cYEtVEw6V7EWQPhQ/vFINU0oR09nCGUUJUlo7fGVUAmVsEhjsOTU0vDLI0+q4guzbGnwhbnybgRsAb9BWIHEkkf2FqyCpVZZGN+U5T7gJnwxzghr3LPksRFa93Kj5AppEzudK0gJjZQQDMnCd0Voa2ls0yHWiAMo6TFUj7By3MTkKI6bWKB3qNIwV8JCSHETC3wxqHLvPpkILySsHPsS9eFQzDqxgoQ8sXPNmOwusp731ADh9aPOK6ES1iVsORNWjzhQOZ43a03xuV/pBoThXrE5n/7wgXC2NeG8+R/Q21JhJMTY3kjIhuJPUzjiJ1xIePVTOivEvrT1+PVmopRQCX85oVxQCYFwXpUQR8B4KG0ThE7nzEjCXWoOg9kA4dqk9H06eaZTTpiePjLNzuimwquGCSucFSRynvGCthLahBFzlFAJlfD2hIPbEXqLLxWcf3iGkI5NzPa0BXS9FYQeHZs4uh2hnKepQCgNLQUhxuS8CaGca2uYMFJCJaxLKIej8hxSSVjgEOBCeOnaU2VCPlSbjtweYEsTmuQxVnI3NgdvB0D4MT4WpvzR2J1wRIWr7ypt7Dxg6T7GwrFFSxpyJ2RdurOrAUKXEzxYuT0zVQlveKazEt4FoVwU29UnlL9DK+GnA2G93+Fk7J/IsxHGRr480aptSsU81dKPzR9c1Q6ZnkpCyjNmQwN4csxPEHKK8GgltMnpLNkufPT8dZebbq3nH0o1d/rD1U/pRFnPzpNSQnf9FcLy36+VULY0bCgqJTzTKLOaJhwGXolirNhwelDWig+OeYIREC4okw8meI5jReljJKQHZyALMLcThB0wVJ3QRWfmaVriyzCAdGvEcvwyfLZOhYS5jRv3R3gm9qV8p5GE37wGrIR3RGh7nZQqiDjgTngmUjITrh0Iq/8O427bUblTXC15utjULcB0QdiU9Hg3ZcJpqbmJMde1xX1QqVQqlUqlUqlUKpVKpVKpVCpVpn9lFgUCI6E3/AAAAABJRU5ErkJggg=="
+        alt="" class="d-block">
+      <button class="btn btn-secondary" data-bs-dismiss="offcanvas">Close</button>
+    </div>
+  </div>
+
+  <!--=============================== end header   =================-->
+
+  <!-- ============================== start hero ================ -->
+  <section id="hero">
+    <div class="container-xl">
+      <div class="hero-content text-center d-flex align-items-center justify-content-center flex-column">
+        <h1 class="fw-bolder">Give the gift of learning - help us <br> Educate every child</h1>
+        <p class="fs-5 fw-bold">Your support provides resources, and opportunities needed for children to
+          access
+          quality education. Together,
+          we can ensure every child has the chance to learn and thrive!</p>
+        <button type="button" class="btn btn-dark btn-lg my-1 ">Donate now</button>
+      </div>
+    </div>
+  </section>
+  <!--=============================== end hero   =================-->
+
+  <!-- ============================== start gallery layout ================ -->
+  <div class="container mt-5 gallery-section">
+    <div class="row g-3 d-flex align-items-end">
+      <div class="col-md-3">
+        <div class="position-relative">
+          <img style="height: 300px;" src="assert/img4.png" class="w-100 rounded-4">
+          <div class="card-img-overlay d-flex align-items-end">
+            <h4 class="text-white fs-2">Be the reason a child smiles</h4>
+          </div>
+        </div>
+        <div class="custom-card bg-dark-green mt-3">
+          <h2 class="fw-bold fs-1">85%</h2>
+          <p class="fs-5">Increase in literacy rate in the regions we serve</p>
+        </div>
+      </div>
+      <div class="col-md-3">
+        <div class="position-relative">
+          <img src="assert/img5.png" style="max-height: 400px;" class="w-100 rounded-4">
+          <div class="card-img-overlay text-white d-flex flex-column justify-content-end ">
+            <h2 class="fs-1">200+</h2>
+            <p>Trained teachers empowering young minds everyday</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3">
+        <div class="custom-card bg-light-blue">
+          <h4 class="fs-3">Join 1000 people building a better tomorrow.</h4>
+          <button class="btn btn-dark mt-3">Join Community</button>
+        </div>
+      </div>
+      <div class="col-md-3">
+
+        <div class="position-relative ">
+          <img src="assert/img5.png" style="max-height: 380px;" class="w-100 rounded-4">
+          <div class="card-img-overlay d-flex align-items-end">
+            <h5 class="text-white fw-bold">Inspire change, Inspire education</h5>
+          </div>
+        </div>
+        <div class="custom-card bg-dark-green mt-3">
+          <h4 class="fs-4">ONE child, Teacher, Book</h4>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--=============================== end gallery layout   =================-->
+
+  <!-- ============================== start about ================ -->
+  <section id="about-section">
+    <div class="container-xl">
+      <div class="row">
+        <div class="col-md-6">
+          <p class="fs-6 lh-1"> Non Governmental Organisation</p>
+          <h4 class="fw-bolder fs-1 lh-1">Learn About Us</h4>
+          <p class="fs-5 my-3">We envision a world where every child, regardless of their background, has access to
+            quality education and
+            the opportunity to reach their full potential. By building schools, providing essential resources, and
+            offering scholarships, we strive to create a future where education bridges gaps and transforms lives.
+            Together, we can turn this vision into reality and unlock brighter futures for all children.</p>
+          <div class="about__card">
+            <div class="row">
+              <div class="col-md-6 my-1">
+                <div class="card">
+                  <div class="card-body">
+                    <h5 class="card-title fw-bolder fs-2">1000+</h5>
+                    <p class="card-text fs-6">Children Educated across underserved communities.</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6 my-1">
+                <div class="card">
+                  <div class="card-body">
+                    <h5 class="card-title fw-bolder fs-2">200+</h5>
+                    <p class="card-text fs-6">Trained teachers empowering young minds everyday</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6 my-1">
+                <div class="card">
+                  <div class="card-body">
+                    <h5 class="card-title fw-bolder fs-2">5000</h5>
+                    <p class="card-text fs-6">Scholarships awarded to the deserving students</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6 my-1">
+                <div class="card">
+                  <div class="card-body">
+                    <h5 class="card-title fw-bolder fs-2">150</h5>
+                    <p class="card-text fs-6">Schools supported with infrastructure, resources & teacher training</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="card border rounded-4 my-3">
+            <div class="card-body">
+              <h5 class="card-title fw-bolder">Mission & Vision</h5>
+              <p class="card-text">We envision a world where every child, regardless of their background, has access
+                to quality education</p>
+              <a href="#" class="fs-6 text-decoration-underline text-danger fw-bold">Learn more</a>
+            </div>
+          </div>
+          <div class="card border rounded-4 my-3">
+            <div class="card-body">
+              <h5 class="card-title fw-bolder">About NGO</h5>
+              <p class="card-text">We envision a world where every child, regardless of their background, has access
+                to quality education</p>
+              <a href="#" class="fs-6 text-decoration-underline text-danger fw-bold">Learn more</a>
+            </div>
+          </div>
+          <div class="card border rounded-4 my-3">
+            <div class="card-body">
+              <h5 class="card-title fw-bolder">Board Members</h5>
+              <p class="card-text">We envision a world where every child, regardless of their background, has access
+                to quality education</p>
+              <a href="#" class="fs-6 text-decoration-underline text-danger fw-bold">Learn more</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!--=============================== end about   =================-->
+
+  <!-- ============================== start banner ================ -->
+  <div class="banner-section text-white">
+    <div class="container-xl">
+      <div class="banner rounded-md-5 px-4">
+        <div class="banner-top text-center">
+          <h1 class="fs-1 fw-semibold">How We Make A Difference ?</h1>
+          <p class="fs-6 fw-medium">Everything you need to know about supporting education</p>
+        </div>
+        <div class="banner-content">
+          <div class="row">
+            <div class="col-md-4 text-center" style="padding: 20px;">
+              <h4 class="fs-4 fw-bolder">Build & Support Schools</h4>
+              <p class="my-1">We construct and renovate schools in underserved areas, ensuring children have access to
+                safe. equipped learning environments.</p>
+              <img src="assert/card.png" alt="" class="card_img my-1">
+            </div>
+            <div class="col-md-4 text-center " style="padding: 20px;">
+              <img src="assert/card1.png" alt="" class="card_img my-1 order-5 order-md-1">
+              <h4 class="fs-4 fw-bolder">Provide Essential Resources</h4>
+              <p class="my-1">We supply textbooks, school supplies, and digital tools, and offer teacher training to
+                enhance the quality of education and support students' learning needs.</p>
+            </div>
+            <div class="col-md-4 text-center" style="padding: 20px;">
+              <h4 class="fs-4 fw-bolder">Scholarships and Programs</h4>
+              <p class="my-1">We award scholarships to bright, underprivileged students and run educational programs,
+                paving the way for a brighter future.</p>
+              <img src="assert/card2.png" alt="" class="card_img my-1">
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+  <!--=============================== end banner   =================-->
+
+  <!-- ============================== start  frequently asked questions ================ -->
+  <section class="Accordion">
+    <div class="container-xl">
+      <div class="rounded-md-5 accordion-banner">
+        <div class="banner-top text-center " style="margin-bottom: 30px;">
+          <h1 class="fs-1 fw-semibold">Frequently asked questions</h1>
+          <p class="fs-5 fw-medium">Everything you need to know about supporting education</p>
+        </div>
+        <div class="container-fluid px-md-4">
+          <div class="accordion" id="faqAccordion">
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne">
+                  How exactly will my donation be used to support the education of underprivileged children?
+                </button>
+              </h2>
+              <div id="collapseOne" class="accordion-collapse collapse show">
+                <div class="accordion-body">
+                  Your donation directly supports our education programs by funding school supplies, building
+                  classrooms, training teachers, and providing scholarships to children in need.
+                </div>
+              </div>
+            </div>
+
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                  data-bs-target="#collapseTwo">
+                  Can I choose a specific project to donate to?
+                </button>
+              </h2>
+              <div id="collapseTwo" class="accordion-collapse collapse">
+                <div class="accordion-body">
+                  Yes! We provide options to support specific initiatives based on your preference.
+                </div>
+              </div>
+            </div>
+
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                  data-bs-target="#collapseThree">
+                  How can I be sure my donation is making an impact?
+                </button>
+              </h2>
+              <div id="collapseThree" class="accordion-collapse collapse">
+                <div class="accordion-body">
+                  We provide regular impact reports and success stories from the communities you help.
+                </div>
+              </div>
+            </div>
+
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                  data-bs-target="#collapseFour">
+                  How can I get involved beyond donating?
+                </button>
+              </h2>
+              <div id="collapseFour" class="accordion-collapse collapse">
+                <div class="accordion-body">
+                  You can volunteer, advocate, or participate in fundraising events to support our mission.
+                </div>
+              </div>
+            </div>
+
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                  data-bs-target="#collapseFive">
+                  Is my donation tax-deductible?
+                </button>
+              </h2>
+              <div id="collapseFive" class="accordion-collapse collapse">
+                <div class="accordion-body">
+                  Yes, all donations are tax-deductible as per applicable laws.
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!--=============================== end  frequently asked questions   =================-->
+  <!-- contact-section  start-->
+  <div class="container-xl my-3" id="contact-section">
+    <div class="row justify-content-center">
+      <div class="col-lg-12">
+        <div class="row g-0">
+          <!-- Contact Form -->
+          <div class="col-md-7 p-4 contact-form">
+            <h4 class="mb-4">Send us a message</h4>
+            <form>
+              <div class="row">
+                <div class="col-md-6 mb-3">
+                  <label for="name" class="form-label">Name *</label>
+                  <input type="text" class="form-control" id="name" placeholder="Your name" required>
+                </div>
+                <div class="col-md-6 mb-3">
+                  <label for="email" class="form-label">Email *</label>
+                  <input type="email" class="form-control" id="email" placeholder="Your email" required>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-12 mb-3">
+                  <label for="phone" class="form-label">Phone</label>
+                  <input type="number" class="form-control" id="phone" placeholder="Phone #">
+                </div>
+              </div>
+              <div class="mb-3">
+                <label for="message" class="form-label">Message *</label>
+                <textarea class="form-control" id="message" rows="4" placeholder="Write your message"
+                  required></textarea>
+              </div>
+              <button type="submit" class="btn btn-primary">Send Message</button>
+            </form>
+          </div>
+
+          <!-- Contact Info -->
+          <div class="col-md-5 contact-info">
+            <h4>Contact Information</h4>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Molestias, magnam!</p>
+            <p><i class="bi bi-geo-alt-fill"></i> 9757 Aspen Lane South Richmond Hill, NY 11419</p>
+            <p><i class="bi bi-telephone-fill"></i> +1 (291) 939 9321</p>
+            <p><i class="bi bi-envelope-fill"></i> info@mywebsite.com</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- contact-section end-->
+  <!-- ============================== start  footer ================ -->
+  <footer>
+    <div class="container-xl">
+      <div class="row  text-white " style="padding: 50px 0;">
+        <div class="col-md-3">
+          <a class="navbar-brand d-flex align-items-center" href="#">
+            <img src="assert/egologo.png" alt="EduChild Logo" width="45" class="me-2">
+            <span class="fs-3 fw-bold">EduChild</span>
+          </a>
+          <p class="fw-bold my-2 lh-1">Designed with love, for groups to create memories together.</p>
+          <a href="#" class="text-white fs-6 text-decoration-none text-uppercase">educhild.pvt.ltd</a>
+
+          <p class="fs-6">educhild@gmail.com</p>
+        </div>
+        <div class="col-md-3">
+          <ul class="list-unstyled fs-5 fw-bold">
+            <li style="cursor: pointer;" class="footer-links">Our Work</li>
+            <li style="cursor: pointer;" class="footer-links">Our Story</li>
+            <li style="cursor: pointer;" class="footer-links">Partner With Us</li>
+          </ul>
+        </div>
+        <div class="col-md-3">
+          <ul class="list-unstyled fs-5 fw-bold">
+            <li style="cursor: pointer;" class="footer-links">Blogs</li>
+            <li style="cursor: pointer;" class="footer-links">Internship</li>
+            <li style="cursor: pointer;" class="footer-links">Career</li>
+          </ul>
+        </div>
+        <div class="col-md-3">
+          <div class="social-icon d-flex gap-3">
+            <div class="instagram fs-5"><a href="#" class="text-white"><i class="bi bi-instagram"></i></a></div>
+            <div class="facebook fs-5"><a href="#" class="text-white"><i class="bi bi-facebook"></i></a></div>
+            <div class="youtube fs-5"><a href="#" class="text-white"><i class="bi bi-youtube"></i></a></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <!--=============================== end  footer   =================-->
+  <!-- ==============bootstrap js cdn============== -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>

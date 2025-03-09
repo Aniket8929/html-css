@@ -1,0 +1,204 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+:root {
+  --primary-clr: #182815;
+  --secondary-clr: #3f5528;
+  --third-clr: #ffc107;
+  --dark-gery: #e9ebe0;
+  --text-grey: #E9EBE0;
+  --ling-black: #000000;
+}
+
+section {
+  padding: 30px 0;
+}
+
+.navbar .navbar-brand span {
+  color: var(--secondary-clr);
+}
+
+.donate__btn {
+  background-color: var(--secondary-clr) !important;
+  color: var(--text-grey);
+  border: none;
+}
+.banner {
+  padding: 70px 0;
+  background-color: var(--secondary-clr);
+}
+
+.card_img {
+  
+  mix-blend-mode: multiply;
+}
+
+
+.custom-card {
+  border-radius: 20px;
+  overflow: hidden;
+  padding: 20px;
+  color: white;
+}
+
+.bg-dark-pink {
+  background-color: #e0a4c4;
+}
+
+.bg-dark-green {
+  background-color: #064E3B;
+}
+
+.bg-light-blue {
+  background-color: #5D698D;
+}
+
+.bg-brown {
+  background-color: #935D3C;
+}
+
+.bg-dark-blue {
+  background-color: #243C5A;
+}
+
+.text-overlay {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  color: white;
+  font-weight: bold;
+}
+
+.card-img-overlay {
+  background: rgba(0, 0, 0, 0.4);
+  border-radius: 20px;
+  padding: 20px;
+}
+
+.gallery-section {
+  min-height: 80vh;
+}
+
+/* accordion */
+.accordion-banner {
+  overflow: hidden;
+  padding-block: 30px;
+  background-color: var(--dark-gery);
+}
+
+.accordion-item {
+  background-color: transparent;
+  border-top: 0.5px solid black !important;
+  border-bottom: 0.5px solid black !important;
+}
+
+.accordion-button {
+  background-color: transparent;
+  font-weight: bold;
+  box-shadow: none;
+}
+
+.accordion-button:not(.collapsed) {
+  color: #000;
+  background-color: transparent;
+}
+
+/* contact form */
+.contact-form {
+  background: white;
+  padding: 40px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.contact-info {
+  background: #2d4373;
+  color: white;
+  padding: 40px;
+  border-radius: 10px;
+}
+
+.contact-info h4 {
+  margin-bottom: 20px;
+}
+
+.contact-info p {
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+
+.contact-info i {
+  margin-right: 10px;
+}
+
+/* footer */
+.footer-links {
+  transition: all 0.3s ease-in;
+}
+
+.footer-links:hover {
+  color: grey;
+}
+
+.instagram,
+.facebook,
+.youtube {
+  width: 45px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 45px;
+  border: 1px solid black;
+  border-radius: 50%;
+  transition: all 0.3s ease-in;
+}
+
+.youtube:hover {
+  scale: 1.2;
+  transform: translateY(-10px);
+}
+
+.facebook:hover {
+  scale: 1.2;
+  transform: translateY(-10px);
+}
+
+.instagram:hover {
+  scale: 1.2;
+  transform: translateY(-10px);
+}
+
+footer {
+  background-color: var(--primary-clr);
+}
+
+.modal {
+  z-index: 999;
+  background-color: red;
+}
+
+@media (min-width: 992px) {
+  section {
+    padding: 60px 0;
+  }
+
+  .accordion-banner {
+    overflow: hidden;
+    padding: 60px 80px;
+    background-color: var(--dark-gery);
+  }
+
+  #faqAccordion>div>h2>button {
+    font-size: 1.4rem;
+  }
+
+  .hero-content p {
+    width: 60%;
+  }
+}
