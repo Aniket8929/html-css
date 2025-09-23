@@ -16,7 +16,6 @@ jobs:
       - name: Deploy CarRental
         uses: JamesIves/github-pages-deploy-action@v4
         with:
-          branch: gh-pages
-          folder: docs/CarRental
+          branch: gh-pages          # target branch to deploy to
+          folder: docs/CarRental    # the folder to publish
           token: ${{ secrets.GITHUB_TOKEN }}
-          
