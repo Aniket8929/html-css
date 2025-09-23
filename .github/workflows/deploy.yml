@@ -4,6 +4,8 @@ on:
   push:
     branches:
       - main
+    paths:
+      - 'docs/CarRental/**'
 
 jobs:
   deploy:
@@ -14,5 +16,7 @@ jobs:
       - name: Deploy CarRental
         uses: JamesIves/github-pages-deploy-action@v4
         with:
-          branch: gh-pages      
-          folder: docs/CarRental 
+          branch: gh-pages
+          folder: docs/CarRental
+          token: ${{ secrets.GITHUB_TOKEN }}
+          
