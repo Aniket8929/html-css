@@ -1,0 +1,614 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+:root {
+  --primary-clr: #ff4c31;
+  --light-oragne: #ff4a2ed5;
+  --pink-light: #feedea;
+  --white: #fff;
+  --black: #161616;
+  --text-clr: #8080808a;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+
+section {
+  padding: 60px 0;
+}
+
+.wrapper {
+  max-width: 1100px;
+  margin: auto;
+  width: 90%;
+}
+
+.btn {
+  padding: 10px 20px;
+  border: none;
+  font-size: 0.9rem;
+  border-radius: 5px;
+  text-transform: capitalize;
+}
+
+.btn-primary {
+  background-color: var(--primary-clr);
+  color: var(--white);
+}
+
+.btn-sec {
+  background-color: var(--black);
+  color: white;
+}
+
+/* ++++++++++++header++++++++++++++ */
+header {
+  padding: 0 20px;
+  position: fixed;
+  left: 0;
+  width: 100%;
+  top: 0;
+  background-color: var(--white);
+  z-index: 900;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.151);
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  padding: 10px 0;
+  justify-content: space-between;
+}
+
+nav .logo img {
+  width: 60px;
+  cursor: pointer;
+}
+
+.nav-links {
+  display: flex;
+  gap: 20px;
+  list-style: none;
+  font-weight: 600;
+}
+
+.nav-links li {
+  padding: 8px 0;
+  cursor: pointer;
+  transition: all 0.3s ease-in;
+}
+
+.nav-links li.active {
+  color: var(--primary-clr);
+}
+
+.nav-links li:hover {
+  color: var(--primary-clr);
+}
+
+.nav_btn {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.nav_btn a {
+  font-size: 1rem;
+  color: var(--black);
+  text-decoration: none;
+  font-weight: 600;
+}
+
+/* main  section*/
+.bg-black {
+  background-color: #111;
+  color: #fff;
+}
+
+.hero-section {
+  overflow: hidden;
+  min-height: 100vh;
+  padding: 90px 0;
+  display: flex;
+  align-items: center;
+  background-image: url(./image/car.png);
+  background-repeat: no-repeat;
+  background-size: 90%;
+  background-position: 180%  40%;
+}
+
+.hero__left {
+  width: 45%;
+}
+
+.hero__left .subtitle {
+  font-size: 1.4rem;
+  font-weight: 500;
+}
+
+.hero__left .hero__left-title {
+  font-size: 2.6rem;
+}
+
+.hero__left .hero__left-title span {
+  color: var(--light-oragne);
+}
+
+.hero__left .description {
+  color: var(--text-clr);
+  margin: 20px 0;
+  width: 80%;
+}
+
+.hero__right {
+  width: 50%;
+}
+
+.hero__right img {
+  width: 100%;
+}
+
+/* plan section */
+
+.plan-title {
+  padding: 20px 0;
+  text-align: center;
+}
+
+.plan-title h4 {
+  font-size: 1.2rem;
+}
+
+.plan-title h2 {
+  font-size: 2.5rem;
+}
+
+.plan-title p {
+  color: var(--text-clr);
+  font-size: 1rem;
+  margin-top: 20px;
+}
+
+.plan-cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: space-between;
+}
+
+.plan-card {
+  min-width: 280px;
+  width: 25%;
+  text-align: center;
+  padding: 10px;
+}
+
+.plan-card h4 {
+  font-weight: 700;
+  font-size: 1.5rem;
+  margin: 10px 0;
+}
+
+.plan-card p {
+  color: var(--text-clr);
+}
+
+.plan-card .image-conatiner img {
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.plan-card .image-conatiner img:hover {
+  animation: leftToright 0.3s ease-in 2;
+}
+
+
+/*  rental section  */
+
+.rental-tag {
+  display: flex;
+  gap: 20px;
+  overflow-y: hidden;
+}
+
+.rental-tag::-webkit-scrollbar {
+  display: none;
+}
+
+.rental-btn {
+  font-size: 1.1rem;
+  white-space: nowrap;
+  padding: 15px 30px;
+  font-weight: 700;
+  border: none;
+  transition: all 0.2s ease;
+  text-align: center;
+  cursor: pointer;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.178);
+}
+
+.rental-btn.active {
+  color: var(--white);
+  background-color: var(--primary-clr);
+}
+
+/* rental__card actual card */
+.rental__card {
+  display: flex;
+  margin-top: 40px;
+  justify-content: space-between;
+  padding: 50px 0;
+}
+
+.rental__card-left {
+  width: 55%;
+}
+
+.rental__card-left img {
+  width: 100%;
+}
+
+.rental__card-right {
+  width: 40%;
+}
+
+.price-dec {
+  display: inline-block;
+  padding: 10px;
+  width: 100%;
+  border-bottom: 1px solid black;
+}
+
+.price-dec .price {
+  font-size: 2.5rem;
+}
+
+.car-dec {
+  margin: 20px 0;
+}
+
+.car-dec p {
+  margin: 10px 0;
+  font-size: 1.2rem;
+  color: var(--text-clr);
+}
+
+/* about section */
+.about {
+  display: flex;
+  gap: 50px;
+  flex-wrap: wrap;
+}
+
+.about__left {
+  width: 40%;
+  padding: 20px;
+}
+
+.about__left img {
+  width: 100%;
+}
+
+.about__right {
+  width: 40%;
+}
+
+.about__right h4 {
+  font-size: 1.6rem;
+}
+
+.about__right h1 {
+  font-size: 2.4rem;
+}
+
+.about__right p {
+  color: var(--text-clr);
+  margin: 15px 0;
+  font-size: 1.1rem;
+}
+
+/* banner */
+.banner-img {
+  background-image: linear-gradient(#1111110e, #111), url(https://demo.xpeedstudio.com/carrental/home-v4/wp-content/uploads/sites/5/2020/06/cta_car_action.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top;
+  padding: 100px 0;
+  background-color: #16161652;
+}
+
+.banner {
+  color: var(--white);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  backdrop-filter: blur(-100px);
+}
+
+.banner-content h1 {
+  font-size: 2.5rem;
+  font-weight: 900;
+}
+
+.banner:last-child button {
+  font-size: 1.3rem;
+}
+
+/* Testimonials */
+.testimonials-cards {
+  display: flex;
+  padding: 20px;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  overflow-y: hidden;
+}
+
+.testimonials-card {
+  width: 48%;
+  padding: 20px;
+  background-color: white;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.267);
+}
+
+.testimonials-card h4 {
+  font-size: 1.6rem;
+}
+
+.profile {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.profile-img {
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.profile-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.profile-details h4 {
+  font-size: 1rem;
+}
+
+/* faq section */
+.faq-section {
+  min-height: 80vh;
+}
+
+.faq-container {
+  width: 90%;
+  margin: auto;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.faq-item {
+  border-bottom: 1px solid #ddd;
+  padding: 10px 0;
+}
+
+.faq-question {
+  font-weight: bold;
+  font-size: 1.5rem;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.faq-answer {
+  display: none;
+  padding-top: 5px;
+}
+
+/* footer */
+
+footer {
+  display: flex;
+  padding: 30px 0;
+  flex-wrap: wrap;
+}
+
+.footer__content {
+  flex-basis: 250px;
+  flex-grow: 1;
+}
+
+.footer__content .footer-logo {
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.footer__content p {
+  font-size: 0.9rem;
+  margin: 20px 0;
+}
+
+.footer__content h4 {
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.footer__content ul {
+  list-style: none;
+}
+
+.footer__content ul li {
+  cursor: pointer;
+  padding: 8px 0;
+}
+
+.footer__content ul li span {
+  color: var(--primary-clr);
+}
+
+.footer__content form input {
+  width: 100%;
+  font-size: 0.9rem;
+  padding: 10px;
+  text-align: center;
+}
+
+.footer__content button {
+  width: 100%;
+  margin-top: 10px;
+}
+
+@media (max-width:1024px) {
+  .nav-links {
+    display: none;
+  }
+}
+
+
+@media (max-width:900px) {
+  .hero__left {
+  width: 80%;
+}
+}
+@media (max-width:768px) {
+  .hero-section {
+    background-position: center;
+  }
+
+  .hero__left {
+    width: 100%;
+  }
+
+  .rental__card {
+    flex-direction: column;
+  }
+
+  .rental__card-left {
+    width: 90%;
+  }
+
+  .rental__card-right {
+    width: 100%;
+  }
+
+  .about {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .about__left {
+    width: 80%;
+    padding: 20px;
+  }
+
+  .about__right {
+    width: 100%;
+  }
+}
+
+@media (max-width:520px) {
+
+  header {
+    padding: 10px 15px;
+  }
+
+  .nav_btn {
+    gap: 5px;
+  }
+
+  /* nav .logo img {
+    width: px;
+  } */
+
+  .hero-section {
+    margin-top: 30px;
+}
+  .btn {
+    padding: 8px 15px;
+  }
+
+  .faq-question {
+    font-size: 1.1rem;
+  }
+
+  .hero-section {
+    min-height: auto;
+    background-position: center bottom;
+    background-size: contain;
+
+  }
+
+  .hero__left .hero__left-title {
+    font-size: 2rem;
+  }
+
+  .hero__left .subtitle {
+    font-size: 1.2rem;
+    font-weight: 500;
+  }
+
+
+  .plan-title h2 {
+    font-size: 2rem;
+    line-height: 1;
+  }
+
+  .hero__left .description {
+    color: var(--text-clr);
+    margin: 0;
+    width: 100%;
+  }
+
+  .hero__btn {
+    margin-top: 15px;
+  }
+
+
+  .plan-card {
+    width: 100%;
+  }
+
+  section {
+    padding: 30px 0;
+  }
+
+  .about {
+    gap: 10px;
+  }
+
+  .about__left {
+    width: 100%;
+    padding: 20px;
+  }
+
+  .about__right h1 {
+    font-size: 2rem;
+    line-height: 1.1;
+  }
+
+  .banner {
+    flex-direction: column;
+  }
+
+  .banner-img {
+    padding: 40px 0;
+  }
+
+  .testimonials-cards {
+    flex-direction: column;
+  }
+
+  .testimonials-card {
+    width: 100%;
+  }
+}
