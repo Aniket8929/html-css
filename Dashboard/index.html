@@ -1,0 +1,520 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard</title>
+
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <!-- Material Design Icons (MDI) CDN -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@mdi/font@7.4.47/css/materialdesignicons.min.css">
+
+  <!-- font awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+    integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <!-- custom css -->
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+
+
+  <main>
+    <!-- sidebar -->
+    <aside>
+      <div class="logo">
+        <img
+          src="https://demos.wrappixel.com/free-admin-templates/bootstrap/matrix-bootstrap-free/assets/images/logo-icon.png"
+          alt="">
+        <span class="logo-header">matrix admin</span>
+      </div>
+
+      <nav>
+        <div class="nav-box active">
+          <div class="nav-link">
+            <span><i class="mdi mdi-view-dashboard"></i></span>
+            <span><a href="#">Dashboard</a></span>
+          </div>
+        </div>
+
+        <div class="nav-box">
+          <div class="nav-link">
+            <span><i class="mdi mdi-chart-areaspline"></i></span>
+            <span><a href="#">Charts</a></span>
+          </div>
+        </div>
+        <div class="nav-box">
+          <div class="nav-link">
+            <span><i class="mdi mdi-chart-bubble"></i></span>
+            <span><a href="#">Widgets</a></span>
+          </div>
+        </div>
+        <div class="nav-box">
+          <div class="nav-link">
+            <span><i class="mdi mdi-border-inside"></i></span>
+            <span><a href="#">Full widths</a></span>
+          </div>
+        </div>
+        <div class="nav-box">
+          <div class="nav-link">
+            <span><i class="mdi mdi-blur-linear"></i></span>
+            <span><a href="#">Forms</a></span>
+          </div>
+        </div>
+        <div class="nav-box">
+          <div class="nav-link">
+            <span><i class="mdi mdi-relative-scale"></i></span>
+            <span><a href="#">buttons</a></span>
+          </div>
+        </div>
+
+        <div class="nav-box">
+          <div class="nav-link">
+            <span><i class="mdi mdi-pencil"></i></span>
+            <span><a href="#">icons</a></span>
+          </div>
+        </div>
+        <div class="nav-box">
+          <div class="nav-link">
+            <span><i class="mdi mdi-pencil"></i></span>
+            <span><a href="#">elements</a></span>
+          </div>
+        </div>
+        <div class="nav-box">
+          <div class="nav-link">
+            <span><i class="mdi mdi-move-resize-variant"></i></span>
+            <span><a href="#">addons</a></span>
+          </div>
+        </div>
+
+        <div class="nav-box">
+          <div class="nav-link">
+            <span><i class="mdi mdi-account-key"></i></span>
+            <span><a href="#">authcation</a></span>
+          </div>
+        </div>
+
+        <div class="nav-box">
+          <div class="nav-link">
+            <span><i class="mdi mdi-alert"></i></span>
+            <span><a href="#">error</a></span>
+          </div>
+        </div>
+
+        <div class="nav-box ">
+          <button class="dow-btn">
+            <span><i class="fa-solid fa-table-columns"></i></span>
+            <span><a href="#">download free </a></span>
+          </button>
+        </div>
+
+      </nav>
+    </aside>
+    <section class="main-content">
+
+      <!-- navbar -->
+      <header>
+
+        <div class="navbar">
+          <!-- Left Section -->
+          <div class="navbar-left">
+            <i class="fas fa-bars"></i>
+            <div class="create-new">
+              <span>Create New</span> <i class="fas fa-caret-down"></i>
+            </div>
+            <div class="search-icon">
+              <i class="fas fa-search"></i>
+            </div>
+          </div>
+
+          <!-- Right Section -->
+          <div class="navbar-right">
+            <i class="fas fa-bell"></i>
+            <i class="fas fa-comment-dots"></i>
+            <div class="profile"></div>
+          </div>
+        </div>
+      </header>
+
+      <!-- content -->
+      <div class="dashboard-content">
+        <!-- dashboard-banner -->
+        <div class="dashboard-banner">
+          <h2>Dashboard</h2>
+          <div class="dashboard-grid">
+            <div class="dashboard-grid-item bg-primary">
+              <span><i class="mdi mdi-view-dashboard"></i></span>
+              <h5>Dashboard</h5>
+            </div>
+            <div class="grid-span-2 dashboard-grid-item bg-success">
+              <span><i class="mdi mdi-chart-areaspline"></i></span>
+              <h5>Charts</h5>
+
+            </div>
+            <div class="dashboard-grid-item bg-orange">
+              <span><i class="mdi mdi-collage"></i></span>
+              <h5>Widgets</h5>
+            </div>
+
+            <div class="dashboard-grid-item bg-error">
+              <span><i class="mdi mdi-border-outside"></i></span>
+              <h5>Tables</h5>
+            </div>
+            <div class="dashboard-grid-item  bg-blue">
+              <span><i class="mdi mdi-arrow-all"></i></span>
+              <h5>Full width</h5>
+            </div>
+            <div class="dashboard-grid-item grid-span-2 bg-error">
+              <span><i class="mdi mdi-receipt"></i></span>
+              <h5>Forms</h5>
+            </div>
+            <div class="dashboard-grid-item bg-blue">
+
+              <span><i class="mdi mdi-relative-scale"></i></span>
+              <h5>Buttons</h5>
+            </div>
+            <div class="dashboard-grid-item bg-primary">
+              <span><i class="mdi mdi-pencil"></i></span>
+              <h5>Elements</h5>
+            </div>
+            <div class="dashboard-grid-item bg-success">
+              <span><i class="mdi mdi-calendar-check"></i></span>
+              <h5>Calnedar</h5>
+            </div>
+            <div class="dashboard-grid-item bg-orange">
+              <span><i class="mdi mdi-alert"></i></span>
+              <h5>Errors</h5>
+            </div>
+          </div>
+        </div>
+
+        <!-- chartsection -->
+        <div class="chart-card">
+          <div class="chart-card-header">
+            <h2>Site Analysis</h2>
+            <p>Overview of Latest Month</p>
+          </div>
+
+          <div class="chart-content">
+            <div class="chart-content-left">
+              <canvas id="myChart"></canvas>
+            </div>
+            <div class="chart-content-right">
+              <!-- Stats Cards -->
+              <div class="cards">
+                <div class="card">
+                  <i class="mdi mdi-account"></i>
+                  <h3>2540</h3>
+                  <p>Total Users</p>
+                </div>
+                <div class="card">
+                  <i class="mdi mdi-account-plus"></i>
+                  <h3>120</h3>
+                  <p>New Users</p>
+                </div>
+                <div class="card">
+                  <i class="mdi mdi-cart"></i>
+                  <h3>656</h3>
+                  <p>Total Shop</p>
+                </div>
+                <div class="card">
+                  <i class="mdi mdi-tag"></i>
+                  <h3>9540</h3>
+                  <p>Total Orders</p>
+                </div>
+                <div class="card">
+                  <i class="mdi mdi-package-variant-closed"></i>
+                  <h3>100</h3>
+                  <p>Pending Orders</p>
+                </div>
+                <div class="card">
+                  <i class="mdi mdi-earth"></i>
+                  <h3>8540</h3>
+                  <p>Online Orders</p>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+
+        <!-- query section -->
+
+        <div class="query-container">
+          <div class="query-left">
+            <div class="query-content">
+              <div class="heading">
+                <h5 class="title">Latest Posts</h5>
+              </div>
+
+              <div class="posts-cards">
+                <div class="post">
+                  <img
+                    src="https://demos.wrappixel.com/free-admin-templates/bootstrap/matrix-bootstrap-free/assets/images/users/1.jpg"
+                    alt="James Anderson">
+                  <div class="post-content">
+                    <h3>James Anderson</h3>
+                    <p>Lorem Ipsum is simply dummy text of the printing and type setting industry.</p>
+                    <div class="post-actions">
+                      <button class="edit bg-primary">Edit</button>
+                      <button class="publish bg-success">Publish</button>
+                      <button class="delete bg-error">Delete</button>
+                    </div>
+                    <div class="post-date">April 14, 2021</div>
+                  </div>
+                </div>
+                <div class="post">
+                  <img
+                    src="https://demos.wrappixel.com/free-admin-templates/bootstrap/matrix-bootstrap-free/assets/images/users/1.jpg"
+                    alt="James Anderson">
+                  <div class="post-content">
+                    <h3>James Anderson</h3>
+                    <p>Lorem Ipsum is simply dummy text of the printing and type setting industry.</p>
+                    <div class="post-actions">
+                      <button class="edit bg-primary">Edit</button>
+                      <button class="publish bg-success">Publish</button>
+                      <button class="delete bg-error">Delete</button>
+                    </div>
+                    <div class="post-date">April 14, 2021</div>
+                  </div>
+                </div>
+                <div class="post">
+                  <img
+                    src="https://demos.wrappixel.com/free-admin-templates/bootstrap/matrix-bootstrap-free/assets/images/users/1.jpg"
+                    alt="James Anderson">
+                  <div class="post-content">
+                    <h3>James Anderson</h3>
+                    <p>Lorem Ipsum is simply dummy text of the printing and type setting industry.</p>
+                    <div class="post-actions">
+                      <button class="edit bg-primary">Edit</button>
+                      <button class="publish bg-success">Publish</button>
+                      <button class="delete bg-error">Delete</button>
+                    </div>
+                    <div class="post-date">April 14, 2021</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="query-content">
+              <div class="progress-box-container">
+                <h2>Progress Box</h2>
+
+                <div class="progress-item">
+                  <div class="progress-flex">
+                    <div class="progress-text">
+                      81% Clicks
+                    </div>
+                    <div class="progress-count">
+                      125
+                    </div>
+                  </div>
+                  <div class="progress-bar-wrap">
+                    <div class="progress-bar purple" style="width: 81%;"></div>
+                  </div>
+                </div>
+
+                <div class="progress-item">
+                  <div class="progress-flex">
+                    <div class="progress-text">
+                      72% Unique Clicks
+                    </div>
+                    <div class="progress-count">
+                      120
+                    </div>
+                  </div>
+                  <div class="progress-bar-wrap">
+                    <div class="progress-bar green" style="width: 72%;"></div>
+                  </div>
+                </div>
+
+                <div class="progress-item">
+                  <div class="progress-flex">
+                    <div class="progress-text">
+                      53% Impressions
+                    </div>
+                    <div class="progress-count">
+                      785
+                    </div>
+                  </div>
+
+                  <div class="progress-bar-wrap">
+                    <div class="progress-bar blue" style="width: 53%;"></div>
+                  </div>
+                </div>
+
+                <div class="progress-item">
+                  <div class="progress-flex">
+                    <div class="progress-text">
+                      3% Online Users
+                    </div>
+                    <div class="progress-count">
+                      8
+                    </div>
+                  </div>
+                  <div class="progress-bar-wrap">
+                    <div class="progress-bar red" style="width: 3%;"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+
+            <div class="query-content">
+              <div class="news-updates-container">
+                <h2>News Updates</h2>
+                <ul class="news-list">
+                  <li class="news-item item-checked">
+                    <div class="news-icon"><i class="fas fa-check-circle"></i></div>
+                    <div class="news-content">
+                      <p class="title">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                      <p class="subtitle">dolor sit amet, consectetur adipiscing</p>
+                    </div>
+                    <div class="news-date">
+                      <span class="day">20</span>
+                      <span class="month">Jan</span>
+                    </div>
+                  </li>
+
+                  <li class="news-item item-gift">
+                    <div class="news-icon"><i class="fas fa-gift"></i></div>
+                    <div class="news-content">
+                      <p class="title">Congratulation Maruti, Happy Birthday</p>
+                      <p class="subtitle">many many happy returns of the day</p>
+                    </div>
+                    <div class="news-date">
+                      <span class="day">11</span>
+                      <span class="month">Jan</span>
+                    </div>
+                  </li>
+
+                  <li class="news-item item-plus">
+                    <div class="news-icon"><i class="fas fa-plus-circle"></i></div>
+                    <div class="news-content">
+                      <p class="title">Maruti is a Responsive Admin theme</p>
+                      <p class="subtitle">But already everything was solved. It will ...</p>
+                    </div>
+                    <div class="news-date">
+                      <span class="day">19</span>
+                      <span class="month">Jan</span>
+                    </div>
+                  </li>
+
+                  <li class="news-item item-rocket">
+                    <div class="news-icon"><i class="fas fa-rocket"></i></div>
+                    <div class="news-content">
+                      <p class="title">Envato approved Maruti Admin template</p>
+                      <p class="subtitle">i am very happy to approved by TF</p>
+                    </div>
+                    <div class="news-date">
+                      <span class="day">20</span>
+                      <span class="month">Jan</span>
+                    </div>
+                  </li>
+
+                  <li class="news-item item-question">
+                    <div class="news-icon"><i class="fas fa-question-circle"></i></div>
+                    <div class="news-content">
+                      <p class="title">I am always here if you have any question</p>
+                      <p class="subtitle">we glad that you choose our template</p>
+                    </div>
+                    <div class="news-date">
+                      <span class="day">15</span>
+                      <span class="month">Jan</span>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+          </div>
+          <div class="query-right">
+            <div class="chat-container">
+              <div class="message user-bb">
+                <div class="sender-name">User BB</div>
+                Hello AA, kya tum free ho?
+              </div>
+
+              <div class="message user-aa">
+                <div class="sender-name">User AA</div>
+                Haan! Batao, kya kaam hai?
+              </div>
+
+              <div class="message user-bb">
+                <div class="sender-name">User BB</div>
+                Mujhe project ke liye kuch data chahiye tha.
+              </div>
+
+              <div class="message user-aa">
+                <div class="sender-name">User AA</div>
+                Theek hai, main abhi bhejta hoon. Check kar lo.
+              </div>
+
+              <div class="message user-bb">
+                <div class="sender-name">User BB</div>
+                Shukriya! Mil gaya. Ye perfect hai.
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+
+  <script>
+    const ctx = document.getElementById('myChart').getContext('2d');
+    const labels = Array.from({ length: 70 }, (_, i) => (i / 10).toFixed(1));
+
+    const data = {
+      labels: labels,
+      datasets: [
+        {
+          label: 'sin(x)',
+          data: labels.map(x => Math.sin(x)),
+          borderColor: 'tomato',
+          backgroundColor: 'tomato',
+          tension: 0.4,
+          pointRadius: 3
+        },
+        {
+          label: 'cos(x)',
+          data: labels.map(x => Math.cos(x)),
+          borderColor: 'deepskyblue',
+          backgroundColor: 'deepskyblue',
+          tension: 0.4,
+          pointRadius: 3
+        }
+      ]
+    };
+
+    new Chart(ctx, {
+      type: 'line',
+      data: data,
+      options: {
+        responsive: true,
+        plugins: {
+          legend: {
+            position: 'top'
+          }
+        },
+        scales: {
+          x: {
+            title: { display: true, text: 'x' }
+          },
+          y: {
+            title: { display: true, text: 'y' }
+          }
+        }
+      }
+    });
+  </script>
+</body>
+
+</html>
