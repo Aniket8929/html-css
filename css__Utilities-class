@@ -1,0 +1,100 @@
+/* ===========================
+   Utility CSS Library
+   Author: Professional
+   =========================== */
+
+/* ---------- Root Variables ---------- */
+:root {
+  /* Colors */
+  --color-primary: #1d4ed8;
+  --color-secondary: #6b7280;
+  --color-success: #16a34a;
+  --color-danger: #dc2626;
+  --color-warning: #f59e0b;
+  --color-info: #0ea5e9;
+  --color-light: #f3f4f6;
+  --color-dark: #111827;
+
+  /* Text Colors for Contrast */
+  --text-light: #ffffff;
+  --text-dark: #000000;
+
+  /* Font Sizes */
+  --text-xs: 0.75rem;
+  --text-sm: 0.875rem;
+  --text-base: 1rem;
+  --text-lg: 1.125rem;
+  --text-xl: 1.25rem;
+  --text-2xl: 1.5rem;
+
+  /* Font Weights */
+  --font-thin: 100;
+  --font-light: 300;
+  --font-normal: 400;
+  --font-medium: 500;
+  --font-semibold: 600;
+  --font-bold: 700;
+}
+
+/* ---------- Text Color Utilities ---------- */
+.text-primary { color: var(--color-primary); }
+.text-secondary { color: var(--color-secondary); }
+.text-success { color: var(--color-success); }
+.text-danger { color: var(--color-danger); }
+.text-warning { color: var(--color-warning); }
+.text-info { color: var(--color-info); }
+.text-light { color: var(--color-light); }
+.text-dark { color: var(--color-dark); }
+
+/* ---------- Background Color Utilities ---------- */
+.bg-primary { background-color: var(--color-primary); color: var(--text-light); }
+.bg-secondary { background-color: var(--color-secondary); color: var(--text-light); }
+.bg-success { background-color: var(--color-success); color: var(--text-light); }
+.bg-danger { background-color: var(--color-danger); color: var(--text-light); }
+.bg-warning { background-color: var(--color-warning); color: var(--text-dark); }
+.bg-info { background-color: var(--color-info); color: var(--text-light); }
+.bg-light { background-color: var(--color-light); color: var(--text-dark); }
+.bg-dark { background-color: var(--color-dark); color: var(--text-light); }
+
+/* ---------- Font Size Utilities ---------- */
+.text-xs { font-size: var(--text-xs); }
+.text-sm { font-size: var(--text-sm); }
+.text-base { font-size: var(--text-base); }
+.text-lg { font-size: var(--text-lg); }
+.text-xl { font-size: var(--text-xl); }
+.text-2xl { font-size: var(--text-2xl); }
+
+/* ---------- Font Weight Utilities ---------- */
+.font-thin { font-weight: var(--font-thin); }
+.font-light { font-weight: var(--font-light); }
+.font-normal { font-weight: var(--font-normal); }
+.font-medium { font-weight: var(--font-medium); }
+.font-semibold { font-weight: var(--font-semibold); }
+.font-bold { font-weight: var(--font-bold); }
+
+/* ---------- Text Alignment Utilities ---------- */
+.text-left { text-align: left; }
+.text-center { text-align: center; }
+.text-right { text-align: right; }
+.text-justify { text-align: justify; }
+
+/* ---------- Text Transform Utilities ---------- */
+.uppercase { text-transform: uppercase; }
+.lowercase { text-transform: lowercase; }
+.capitalize { text-transform: capitalize; }
+
+/* ---------- Text Decoration Utilities ---------- */
+.underline { text-decoration: underline; }
+.line-through { text-decoration: line-through; }
+.no-underline { text-decoration: none; }
+
+/* ---------- Extra Utilities ---------- */
+.p-1 { padding: 0.25rem; }
+.p-2 { padding: 0.5rem; }
+.p-3 { padding: 0.75rem; }
+.p-4 { padding: 1rem; }
+.m-1 { margin: 0.25rem; }
+.m-2 { margin: 0.5rem; }
+.m-3 { margin: 0.75rem; }
+.m-4 { margin: 1rem; }
+.rounded { border-radius: 0.375rem; }
